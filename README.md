@@ -12,16 +12,7 @@ povezanem, tako da pričnemo z iskanjem v glavi seznama in se pomikamo proti rep
 dokler ne najdemo iskanega ključa ali pa naletimo na NIL. V izpisu 1 je prikazan
 psevdokod funkcije NAJDI(head, key), ki v seznamu z glavo z imenom head poišče in
 vrne kazalec na element z vrednostjo ključa key. Če iskanega elementa ni v seznamu,
-funkcije vrne NIL, glej izpis 1.
-function NAJDI(head, key)
-begin
-current := head;
-while current<>NIL and current.key<>key do
-current := current.next;
-end
-return current;
-end
-Izpis 1: Psevdokod funkcije NAJDI
+
 Vstavljanje elementa v seznam
 Vstavljanje novega elementa v seznam izvedemo tako, da ga vrinemo za nek podan
 element seznama (izpis 2), ali pa ga vstavimo v glavo (tj. na prvo mesto – izpis 3).
