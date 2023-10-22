@@ -8,9 +8,6 @@ struct element {
 	element* prev, * next;
 };
 
-int nepomembna_funkcija() {
-	return 0;	
-}
 
 void menu() {
     cout << "______________________________________" << endl;
