@@ -18,34 +18,10 @@ Vstavljanje novega elementa v seznam izvedemo tako, da ga vrinemo za nek podan
 element seznama (izpis 2), ali pa ga vstavimo v glavo (tj. na prvo mesto – izpis 3).
 Psevdokoda vstavljanja novega elementa new_el za nek element elem, ki že obstaja v
 seznamu, je procedura VSTAVI_ZA(elem, new_el).
-procedure VSTAVI_ZA(elem, new_el)
-begin
-new_el.prev := elem;
-new_el.next := elem.next;
-elem.next := new_el;
- if new_el.next <> NIL then
- new_el.next.prev := new_el;
- else
- tail := new_el;
-end
-Izpis 2: Psevdokod funkcije VSTAVI_ZA
-Vstavljanja novega elementa new_el na prvo mesto seznama z glavo head je
-procedura VSTAVI_V_GLAVO(head, new_el), prikazana v izpisu 3.
-Stran 2 od 6
-Laboratorij za geometrijsko modeliranje
-in algoritme multimedijev
-Algoritmi in
-podatkovne strukture
-procedure VSTAVI_V_GLAVO(head, new_el)
-begin
-new_el.next := head;
-new_el.prev := NIL;
-if head<>NIL then
-head.prev := new_el;
- else
- tail := new_el;
-head := new_el
-end
+
+Vstavljanja novega elementa new_el na prvo mesto seznama z glavo head je procedura VSTAVI_V_GLAVO(head, new_el), prikazana v izpisu 3.
+
+
 Izpis 3: Psevdokod funkcije VSTAVI_V_GLAVO
 Vstavljanje novega elementa za poljubnim elementom v seznam in vstavljanje v glavo
 seznama lahko vidimo na slikah 2 in 3.
@@ -56,8 +32,7 @@ povezan seznam med elementa B in D. Vidimo, da je potrebno najprej postaviti
 Stran 3 od 6
 Laboratorij za geometrijsko modeliranje
 in algoritme multimedijev
-Algoritmi in
-podatkovne strukture
+
 kazalec C.next na vrednost B.next, kazalec B.next pa postavimo na C. Tako bo sedaj
 element B kazal na C, ta pa dalje na D.
 Sedaj je potrebno postaviti še povratne povezave. Tako kazalec C.prev postavimo na
@@ -88,32 +63,7 @@ in algoritme multimedijev
 Algoritmi in
 podatkovne strukture
 
-procedure BRIŠI(head, elem)
-begin
- if elem.prev=NIL and elem.next=NIL then
- begin
- head:=NIL;
- tail:=NIL;
- end
- else
- begin
-if elem.prev<>NIL then
-elem.prev.next := elem.next;
-else
- begin
-head := elem.next;
- head.prev := NIL;
- end
-if elem.next<>NIL then
-elem.next.prev := elem.prev
- else
- begin
- tail := elem.prev;
- tail.next := NIL;
- end
- end
- delete elem;
-end
+
 
 Izpis 4: Psevdokod funkcije BRIŠI
 Brisanje elementa iz dvojno povezanega seznama je prikazano na sliki 4, kjer iz
