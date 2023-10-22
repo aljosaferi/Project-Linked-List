@@ -8,12 +8,7 @@ struct element {
 	element* prev, * next;
 };
 
-int nova_nepomembna_funkcija() {
-    return 100;
-}
-  
-void  main
-{
+void main { 
 
 void menu() {
     cout << "______________________________________" << endl;
