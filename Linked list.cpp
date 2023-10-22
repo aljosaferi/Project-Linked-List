@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <chrono>
 
 using namespace std;
@@ -8,6 +8,7 @@ struct element {
 	element* prev, * next;
 };
 
+void main { 
 
 void menu() {
     cout << "______________________________________" << endl;
