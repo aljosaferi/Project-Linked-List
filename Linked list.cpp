@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <chrono>
 
 using namespace std;
@@ -8,9 +8,12 @@ struct element {
 	element* prev, * next;
 };
 
-void ni_funkcije() {
-
+int nova_nepomembna_funkcija() {
+    return 100;
 }
+  
+void  main
+{
 
 void menu() {
     cout << "______________________________________" << endl;
