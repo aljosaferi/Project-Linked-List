@@ -8,8 +8,8 @@ struct element {
 	element* prev, * next;
 };
 
-int nepomembna_funkcija() {
-	return 0;	
+void ni_funkcije() {
+
 }
 
 void menu() {
