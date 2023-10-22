@@ -9,6 +9,8 @@ unsigned int Time::getHours() const{
 	return hours;
 }
 
+void test {}
+
 unsigned int Time::getMinutes() const {
 	return minutes;
 }
